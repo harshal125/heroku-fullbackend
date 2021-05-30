@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 
 
-mongoose.connect("mongodb://localhost:27017/registsration",{
+mongoose.connect("mongodb+srv://college-project07:React@07@cluster0.lmwyh.mongodb.net/React_App?retryWrites=true&w=majority",{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true
