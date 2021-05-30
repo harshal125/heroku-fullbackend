@@ -1,0 +1,115 @@
+
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<!-- NAVBAR -->
+<style>
+  .Signin {
+    font-size: 15px;
+    margin-top: 14px;
+    width: 68px;
+    padding-left: 6px;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  
+  #nar {
+    color: white;
+    cursor: pointer;
+    margin-right: 18px;
+    padding: 5px;
+}
+  .far{
+    font-size: 30px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <i id="nar" style='font-size:35px' class='far'  onclick="openNav()">&#xf2bd;</i>
+  <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/register">Register</a>
+      <a href="/login">login</a>
+      <a href="/logout">Logout</a>
+      <a href="/logoutall">Logout From All</a>
+    </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/secret">secret</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0 har" action="/search">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 mx-1" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Hello, world!</title>
+</head>
+<style>
+    
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: linear-gradient(#141e30, #243b55);
+    }
+  
+    .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, .5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+    }
+
+    .login-box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    .login-box .user-box {
+        position: relative;
+    }
+
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+
+    .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+
+    .login-box .user-box input:valid~label {
+        top: -20px;
+        left: 0;
+        color: #03e9f4;
+        font-size: 12px;
+    }
+
+    .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px
+    }
+
+    .login-box a:hover {
+        background: #03e9f4;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;
+    }
+
+    .login-box a span {
+        position: absolute;
+        display: block;
+    }
+
+
+    .list-inline {
+        display: none;
+    }
+
+    .login {
+        position: relative;
+        top: 744px;
+        height: 58px;
+    }
+
+    .login-box .user-box {
+        position: relative;
+        padding: 9px 2px;
+    }
+
+    .Signin {
+        font-size: 15px;
+        margin-top: 14px;
+        width: 68px;
+        padding-left: 6px;
+    }
+
+    .alert-primary {
+    position: relative;
+    top: 71px;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid white;
+    border-radius: .25rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#141e30, #243b55);
+    color: red;
+}
+@media only screen and (max-width: 430px) {
+  .login-box {
+    top: 53%; 
+    width: 304px;
+}
+}
+@media only screen and (max-width: 240px) {
+  .alert-primary{
+      display: none;
+  }
+  .login-box {
+    top: 65%;
+    width: 229px;
+}
+}
+
+</style>
+
+<body>
+
+
+    {{!-- adding navbar.hbs --}}
+    {{>navbar}}
+
+    <div class="alert alert-primary" role="alert">
+        {{success}}
+        {{message}}
+        {{logout}}
+        {{err}}
+    </div>
+    
+
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <div class="user-box">
+                <input type="text" name="email">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="password">
+                <label>Password</label>
+            </div>
+            <input class="btn btn-primary" type="submit" value="login">
+        </form>
+    </div>
+
+    
+    
+    
+
+
+</body>
+
+
+</html>
